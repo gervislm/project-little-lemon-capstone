@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../../images/Logo.svg";
-import { findAllByDisplayValue } from "@testing-library/react";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,17 +7,10 @@ export const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <nav className={`"navbar" ${menuOpen ? "open" : ""}`}>
-      <a>
-        <img src={logo} alt="Logo" />
+    <nav className={`nav-bar ${menuOpen ? "open" : ""}`}>
+      <a href="/" className="logo">
+        <img src={logo} alt="logo" />
       </a>
-
-      {/* mobile navbar */}
-      <div className="menu-icon">
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
 
       {/* nav items */}
       <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
@@ -44,6 +36,13 @@ export const Navbar = () => {
           <a href="/">Login</a>
         </li>
       </ul>
+
+      {/* mobile navbar */}
+      <div className="menu-icon" onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
     </nav>
   );
 };
