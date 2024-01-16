@@ -1,5 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const BookingForm = () => {
-  return <div>BookingForm</div>;
+  const [date, setDate] = useState("");
+  const handleChange = (e) => {
+    setDate(e);
+  };
+
+  return (
+    <header>
+      <section>
+        <form>
+          <fieldset>
+            <div>
+              <label htmlFor="book-date">Choose Date</label>
+              <input
+                id="book-date"
+                value={date}
+                onChange={(e) => handleChange(e.target.value)}
+                type="date"
+                required
+              />
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </header>
+  );
 };
