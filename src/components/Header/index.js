@@ -14,8 +14,9 @@ export const Header = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          {/* <Link></Link> */}
-          <button aria-label="On Click">Reserve a Table</button>
+          <Link to="/booking">
+            <button aria-label="On Click">Reserve a Table</button>
+          </Link>
         </div>
 
         {/* banner texts */}

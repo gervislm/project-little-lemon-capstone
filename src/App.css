@@ -119,6 +119,28 @@ button {
   border-radius: 20px;
 }
 
+/* form stiles */
+
+#book-date,
+#book-time,
+#book-guests,
+#book-occasion {
+  background: #bdbdbd43;
+  padding: 8px 24px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+.btnReceive input {
+  padding: 12px 16px;
+  margin-top: 20px;
+  background: #495e57;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 768px) {
   .menu-icon {
     display: block;
