@@ -1,10 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { BrowserRouter, HashRouter } from "react-router-dom";
 import App from "./App";
 import BookingForm from "./components/BookingForm";
-import Header from "./components/Header";
-import Fetch from "./fetch";
 
 test("Renders the Header heading", () => {
   render(
@@ -44,8 +41,54 @@ test("Initialize/Update Times", () => {
 
   const reserveButton = screen.getByRole("button");
   fireEvent.click(reserveButton);
+});
 
-  const testTime = [];
-  // userEvent.selectOptions(screen.getByLabelText("Choose Time"),screen.getByRole('option', { name: testTime}))
-  // expect(screen.getByRole('option', { name: testTime}).selected).toBe(true);
+describe("Reservation Form HTML validation", () => {
+  let availableTimes;
+  let mockDispatch;
+
+  beforeEach(() => {
+    // Initialize the mock data before each test
+    availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+
+    // Initialize a mock dispatch function
+    mockDispatch = jest.fn();
+  });
+
+  BookingForm.propTypes = {
+    availableTimes: PropTypes.array.isRequired,
+    dispatch: PropTypes.func.isRequired,
+  };
+
+  it("should have required attribute for date input", () => {
+    render(
+      <BookingForm availableTimes={availableTimes} dispatch={mockDispatch} />
+    );
+    const dateInput = screen.getByLabelText("Choose date");
+    expect(dateInput).toHaveAttribute("required");
+  });
+
+  it("should have required attribute for time select", () => {
+    render(
+      <BookingForm availableTimes={availableTimes} dispatch={mockDispatch} />
+    );
+    const timeSelect = screen.getByLabelText("Choose time");
+    expect(timeSelect).toHaveAttribute("required");
+  });
+
+  it("should have required attribute for occasion select", () => {
+    render(
+      <BookingForm availableTimes={availableTimes} dispatch={mockDispatch} />
+    );
+    const occasionSelect = screen.getByLabelText("Occasion");
+    expect(occasionSelect).toHaveAttribute("required");
+  });
+
+  it("should have required attribute for guests slider", () => {
+    render(
+      <BookingForm availableTimes={availableTimes} dispatch={mockDispatch} />
+    );
+    const guestsSlider = screen.getByLabelText("Number of guests");
+    expect(guestsSlider).toHaveAttribute("required");
+  });
 });
