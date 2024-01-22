@@ -27,11 +27,20 @@ nav ul li {
 }
 
 nav ul li a {
+  background-color: #495e579f;
+  padding: 10px;
+  border-radius: 5px;
   color: #000;
 }
 
 nav ul li a:hover {
-  text-decoration: underline solid #495e57;
+  color: #fff;
+  background-color: #495e57;
+}
+
+nav ul li a:focus {
+  color: #fff;
+  background-color: #495e57;
 }
 
 .menu-icon {
