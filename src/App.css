@@ -121,6 +121,22 @@ button {
 
 /* form stiles */
 
+form,
+.confirm {
+  padding: 10px 13%;
+}
+
+.formField {
+  padding: 50px 20px;
+}
+
+input,
+label {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
 #book-date,
 #book-time,
 #book-guests,
@@ -140,6 +156,97 @@ button {
   border: none;
   border-radius: 4px;
 }
+
+.confirm span {
+  color: blue;
+}
+
+/* menu items */
+
+.menu-container {
+  margin: 110px auto;
+  padding: 10px 13%;
+}
+
+.menu-container h2 {
+  color: #000;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+}
+
+.menu-items {
+  width: 350px;
+  background: #a9c8be;
+  border-radius: 8px;
+}
+
+.menu-container img {
+  width: 100%;
+  height: 233px;
+  border-radius: 8px;
+}
+
+.menu-content {
+  padding: 5px 15px;
+}
+
+.menu-content .heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-btn {
+  padding: 5px 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* footer section */
+
+footer section {
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.company-info img {
+  margin-top: 12px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.company-info p {
+  width: 320px;
+}
+
+footer h3 {
+  font-size: 18px;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  padding: 8px 0;
+}
+
+/* responsive screens */
 
 @media screen and (max-width: 768px) {
   .menu-icon {
@@ -172,6 +279,34 @@ button {
 
   .banner-img {
     display: none;
+  }
+
+  form,
+  .confirm {
+    padding: 10px 8%;
+  }
+
+  .header section,
+  .menu-container {
+    padding: 10px 8%;
+  }
+  .menu-container {
+    margin: 20px 0;
+  }
+  .menu-header {
+    justify-content: flex-start;
+  }
+
+  .menu-items {
+    width: 100%;
+  }
+
+  footer section {
+    padding: 10px 8%;
+    flex-direction: column;
+  }
+  .company-info p {
+    width: 100%;
   }
 }
 
