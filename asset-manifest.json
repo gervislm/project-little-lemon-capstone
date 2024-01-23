@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/project-little-lemon-capstone/static/css/main.df7f5b41.css",
-    "main.js": "/project-little-lemon-capstone/static/js/main.6e13749e.js",
+    "main.css": "/project-little-lemon-capstone/static/css/main.d6de3e7e.css",
+    "main.js": "/project-little-lemon-capstone/static/js/main.8a36ec8f.js",
     "static/js/787.11875505.chunk.js": "/project-little-lemon-capstone/static/js/787.11875505.chunk.js",
     "static/media/restaurant-food.jpg": "/project-little-lemon-capstone/static/media/restaurant-food.e8abf5b772b6817189aa.jpg",
     "static/media/small_logo.png": "/project-little-lemon-capstone/static/media/small_logo.2c859235d6c57bb54176.png",
     "static/media/Logo.svg": "/project-little-lemon-capstone/static/media/Logo.f72c913c48c5334f78f2c336ec36f22b.svg",
     "index.html": "/project-little-lemon-capstone/index.html",
-    "main.df7f5b41.css.map": "/project-little-lemon-capstone/static/css/main.df7f5b41.css.map",
-    "main.6e13749e.js.map": "/project-little-lemon-capstone/static/js/main.6e13749e.js.map",
+    "main.d6de3e7e.css.map": "/project-little-lemon-capstone/static/css/main.d6de3e7e.css.map",
+    "main.8a36ec8f.js.map": "/project-little-lemon-capstone/static/js/main.8a36ec8f.js.map",
     "787.11875505.chunk.js.map": "/project-little-lemon-capstone/static/js/787.11875505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df7f5b41.css",
-    "static/js/main.6e13749e.js"
+    "static/css/main.d6de3e7e.css",
+    "static/js/main.8a36ec8f.js"
   ]
 }
